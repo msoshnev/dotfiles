@@ -1,0 +1,17 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": [ "def main():\n\tpass\n\n\nif __name__ == \"__main__\":\n\tmain()" ],
+    "description": "Main function"
+  },
+  "amain": {
+    "prefix": "amain",
+    "body": [ "async def main():\n\tpass\n\n\nif __name__ == \"__main__\":\n\tasyncio.run(main())" ],
+    "description": "Async-main function"
+  },
+  "class": {
+    "prefix": "class",
+    "body": [ "class ${1:ClassName}:\n\t\"\"\"\n\tTODO\n\t\"\"\"\n\n\tdef __init__(self):\n\t\t${2:pass}\n\t" ],
+    "description": "Python-class"
+  }
+}
