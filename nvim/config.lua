@@ -69,4 +69,5 @@ null_ls.setup {
 require('lspconfig')['null-ls'].setup {}
 
 
-lvim.keys.normal_mode["<Leader>o"] = "<CMD>PyrightOrganizeImports<CR>"
+lvim.keys.normal_mode["<Leader>o"] = "<CMD>Isort<CR>"
+
