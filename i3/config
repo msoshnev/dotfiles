@@ -655,7 +655,7 @@ popup_during_fullscreen smart
 ################# i3 gaps next
 
 for_window [class="^.*"] border pixel 2
-  gaps inner 5
+  gaps inner 10
 
 
 
