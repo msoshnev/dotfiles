@@ -15,6 +15,7 @@ lvim.plugins = {
   {"junegunn/fzf"},
   {"AlexVKO/fzf-to-functions.vim"},
   {"averms/black-nvim"},
+  {"cappyzawa/trim.nvim"},
 }
 
 -- Mapping
@@ -51,11 +52,21 @@ lvim.autocommands = {
 
         vim.api.nvim_set_hl(0, "Include", { fg = c.purple })
         vim.api.nvim_set_hl(0, "Constant", { fg = c.fg })
+
+        vim.api.nvim_set_hl(0, "ColorColumn", { fg = 'None', bg = '#292e42' })
       end,
     },
   },
 }
 
+require('trim').setup({
+  ft_blocklist = {},
+  patterns = {},
+  trim_on_write = true,
+  trim_trailing = true,
+  trim_last_line = true,
+  trim_first_line = true,
+})
 
 -- Python
 local null_ls = require("null-ls")
@@ -71,3 +82,4 @@ require('lspconfig')['null-ls'].setup {}
 
 lvim.keys.normal_mode["<Leader>o"] = "<CMD>Isort<CR>"
 
+vim.cmd[[autocmd FileType python set colorcolumn=80]]
