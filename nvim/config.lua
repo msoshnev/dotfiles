@@ -82,4 +82,4 @@ require('lspconfig')['null-ls'].setup {}
 
 lvim.keys.normal_mode["<Leader>o"] = "<CMD>Isort<CR>"
 
-vim.cmd[[autocmd FileType python set colorcolumn=80]]
+vim.cmd[[autocmd FileType python set colorcolumn=99]]
