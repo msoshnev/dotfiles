@@ -101,10 +101,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Add 'YADRO' env vars
-export $(cat ~/.secrets/.creds.env)
+export $(cat ~/.secrets/secrets.env)
 
 # Load aliases
 source ~/.config/zsh/aliases.zsh
 
 # Override prompt definition with shrink_path
 PROMPT='$(git_custom_status)%{$fg[cyan]%}[$(shrink_path -f)]%{$reset_color%}%B$%b '
+
+export EDITOR=/usr/local/bin/nvim
